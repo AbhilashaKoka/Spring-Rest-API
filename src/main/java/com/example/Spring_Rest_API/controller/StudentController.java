@@ -8,13 +8,13 @@ import java.util.List;
 @RestController
 public class StudentController {
 
-
+    //http://localhost:8080/student
     @GetMapping("student")
     public Student getStudent(){
     Student student=new Student(1,"Abhilasha","Koka");
     return student;
     }
-
+    //http://localhost:8080/students
     @GetMapping("students")
     public List<Student> getStudentList(){
      List<Student> listStudent=new ArrayList<>();
@@ -36,7 +36,7 @@ public class StudentController {
         return student;
     }
 
-
+    //http://localhost:8080/students
     @PostMapping("students/create")
     public Student createStudent(@RequestBody Student student) {
         System.out.println(student.getId());
